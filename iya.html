@@ -54,6 +54,24 @@ img {
 .pilihan a:visited {
     color: purple;
 }
+.pilihan {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
     </style>
 </head>
 <body>
@@ -64,15 +82,27 @@ img {
     
     <h3>Kita mau kemana?</h3>
  <div class="pilihan">
-    <a href="nonton.html">a. Nonton</a>
-    <a href="taman.html">b. Taman Hiburan</a>
-    <a href="shopping.html">c. Shopping</a>
-    <a href="dinner.html">d. Dinner Mewah</a>
 
-    <a href="nonton.html"><img src="bioskop.jpg"></a>
-    <a href="taman.html"><img src="Do-fun-jakarta.webp"></a>
-    <a href="shopping.html"><img src="Dubai-Mall.webp"></a>
-    <a href="dinner.html"><img src="10-Tempat-Makan-Romantis-di-Jakarta.webp"></a>
+    <a href="nonton.html" class="card">
+        <p>a. Nonton</p>
+        <img src="bioskop.jpg">
+    </a>
+
+    <a href="taman.html" class="card">
+        <p>b. Taman Hiburan</p>
+        <img src="Do-fun-jakarta.webp">
+    </a>
+
+    <a href="shopping.html" class="card">
+        <p>c. Shopping</p>
+        <img src="Dubai-Mall.webp">
+    </a>
+
+    <a href="dinner.html" class="card">
+        <p>d. Dinner Mewah</p>
+        <img src="10-Tempat-Makan-Romantis-di-Jakarta.webp">
+    </a>
+
 </div>
 
 </body>

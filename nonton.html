@@ -38,6 +38,31 @@ img {
 .pilihan a:visited {
     color: purple;
 }
+.pilihan {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center; /* bikin card di tengah kolom */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.2s, filter 0.2s; /* animasi smooth */
+}
+
+.card img {
+    max-width: 450px;
+    height: auto;
+}
+
+.card:hover {
+    transform: scale(1.05); /* seluruh card membesar */
+    filter: brightness(1.1); /* optional: lebih terang */
+}
        
 
        
@@ -46,11 +71,15 @@ img {
 <body>
  <h2>Kita mau nonton dimana?</h2> 
  <div class="pilihan">
-    <a href="okebioskop.html">a.Transmart Pekalongan XXI</a>
-    <a href="okebioskop.html">b.XXI Pekalongan</a>
+    <a href="okebioskop.html" class="card">
+        <h3>a. Transmart Pekalongan XXI</h3>
+        <img src="transmart.png" alt="">
+    </a>
 
-    <a href="okebioskop.html"><img src="transmart.png" alt=""></a>
-    <a href="okebioskop.html"><img src="xxi.png" alt=""></a>
- </div>  
+    <a href="okebioskop.html" class="card">
+        <h3>b. XXI Pekalongan</h3>
+        <img src="xxi.png" alt="">
+    </a>
+</div>
 </body>
 </html>
