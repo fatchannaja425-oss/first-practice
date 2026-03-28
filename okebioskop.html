@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>okebioskop</title>
+
+<style>
+body {
+    text-align: center;
+    font-family: Arial;
+    margin-top: 80px;
+    background: linear-gradient(270deg, #e6ffe6, #ccf5ff, #ffe6f2);
+    background-size: 600% 600%;
+    animation: bgGerak 10s ease infinite;
+}
+
+/* Animasi background */
+@keyframes bgGerak {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Animasi teks muncul */
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: muncul 1s forwards;
+}
+
+.fade:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+@keyframes muncul {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tombol modern */
+.btn {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 118, 140, 0.4);
+    opacity: 0;
+    animation: muncul 1s forwards;
+    animation-delay: 1s;
+}
+
+.btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 25px rgba(255, 118, 140, 0.6);
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="fade">Aku juga pengen kesitu 😆</h1>
+<h1 class="fade">Aku preparing dulu bentar 🥰</h1>
+
+<button class="btn" onclick="selesai()">Jangan lama2 ya...!😍</button>
+
+<script>
+function selesai() {
+    document.body.innerHTML = "<h1 style='margin-top:100px'>See you nanti yaa 💖</h1>";
+}
+</script>
+
+</body>
+</html>

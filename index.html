@@ -1,33 +1,46 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Saya</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Pesan Rahasia</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 100px;
+            background-color: #ffe6f0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #tidak {
+            position: absolute;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Nama Kamu</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Tentang</a>
-            <a href="#">Project</a>
-            <a href="#">Kontak</a>
-        </nav>
-    </header>
+    <h1>Malam minggu nih, jalan-jalan yuk? ❤️</h1>
 
-    <section class="hero">
-        <h2>Halo, saya web developer pemula</h2>
-        <p>Saya sedang belajar membuat website</p>
-        <button>Klik Saya</button>
-    </section>
+    <a href="iya.html">
+        <button>Iya</button>
+    </a>
 
-    <footer>
-        <p>© 2026 Portfolio</p>
-    </footer>
+    <button id="tidak" onmouseover="lari()">Tidak</button>
 
-    <script src="script.js"></script>
+    <script>
+        function lari() {
+            var x = Math.random() * window.innerWidth;
+            var y = Math.random() * window.innerHeight;
+            
+            document.getElementById("tidak").style.left = x + "px";
+            document.getElementById("tidak").style.top = y + "px";
+        }
+    </script>
+
 </body>
 </html>
